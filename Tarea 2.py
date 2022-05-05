@@ -1,30 +1,31 @@
-print("¿Que moneda desea cambiar?")
-print("1.-Dolares a Pesos Chilenos")
-print("2.-UF a Pesos Chilenos")
-print("3.-Pesos Chilenos a Dolares")
-print("4.-Pesos Chilenos a UF")
-print("5.-No Deseo hacer un cambio")
-desicion = int(input("Seleccione la opcion"))
+print("¿Usted pertenece a duoc?")
+desc = int(input("1.-Si/ 2.-No"))
+print("¿Que libro deseraria llevar?")
+l_inf = int(input("¿Desea uno infantil? 1.-Si/ 2.-No"))
+l_rom = int(input("¿Desea uno de Romance? 1.-Si/ 2.-No"))
+l_cien = int(input("¿Desea uno de Ciencia Ficcion? 1.-Si/ 2.-No"))
+l_inv = int(input("¿Desea uno de Investigacion? 1.-Si/ 2.-No"))
 
-if desicion == 1:
-    cantidad = int(input("¿Cuantos dolares desea cambiar?"))
-    dolar_clp = cantidad * 846 
-    print(f"el cambio de {cantidad} dolares son {dolar_clp} pesos")
+total = 0
+porcentaje = 40/100
 
-if desicion == 2:
-    cantidad = int(input("¿Cuantas UF desea cambiar?"))
-    uf_clp = cantidad * 32095
-    print(f"el cambio de {cantidad} UFs son {uf_clp} pesos")
+if l_inf == 1:
+    total += 3500
 
-if desicion == 3:
-    cantidad = int(input("¿Cuantas Pesos desea cambiar?"))
-    peso_dolar =  cantidad / 846
-    print(f"el cambio de {cantidad} pesos son {peso_clp} dolares")
+if l_rom == 1:
+    total += 4500
 
-if desicion == 4:
-    cantidad = int(input("¿Cuantas Pesos desea cambiar?"))
-    clp_uf =  cantidad / 32095
-    print(f"el cambio de {cantidad} pesos son {clp_uf} Ufs")
+if l_cien == 1:
+    total += 6000
 
-if desicion == 5:
-    print("Vayase a la verga pariente :D")
+if l_inv == 1:
+    total += 15000
+
+if desc == 1:
+    print(f"Su total a pagar es de ${total}")
+    total_con_desc = total * porcentaje
+    print(f"Su total a pagar con descuento es de ${total_con_desc}")
+
+if desc != 1:
+    print(f"Su total a pagar es de ${total}")
+   
