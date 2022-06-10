@@ -28,5 +28,3 @@ if desicion == 4:
 
 if desicion == 5:
     print("Vayase a la verga pariente :D")
-
-
